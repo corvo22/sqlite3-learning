@@ -1,18 +1,7 @@
-body, html {
-	height: 100%;
-}
-
-.bg {
-  /* The image used */
-  background-image: url("bkgrd.jpg");
-
-  /* Full height */
-  height: 100%;
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+body {
+	background-color: #78866B;
+	margin: 1rem auto;
+	max-width: 80ch;
 }
 
 b {
