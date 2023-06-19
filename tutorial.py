@@ -71,7 +71,7 @@ def main():
 	# Delete / drop from table
 	curs.execute("DELETE from customers where rowid = 1")
 	conn.commit()
-	
+
 
 if __name__ == "__main__":
 	main()
