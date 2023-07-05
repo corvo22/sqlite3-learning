@@ -1,0 +1,105 @@
+body {
+	background-image: url('bkgrd.jpg');
+	height: 100vh;
+	background-repeat: no-repeat;
+	width: 100%;
+	background-size: cover;
+	background-position: center;
+	max-width: 80ch;
+	margin: 1rem auto;
+}
+
+.box2 {
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    text-align: center;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+b {
+	color: white;
+	font-family: Lucida Sans Typewriter;
+	font-size: 18;
+}
+
+i {
+	color: white;
+	font-family: Lucida Sans Typewriter;
+	font-size: 18;
+}
+
+a:link, a:visited{
+	color : white;
+	font-family: Lucida Sans Typewriter;
+	font-size: 18;
+}
+
+a:hover {
+	color : 5F6A54;
+	font-family: Lucida Sans Typewriter;
+	font-size: 20;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+
+}
+
+h2 {
+	color: white;
+	font-size: 24;
+	text-align: left;
+
+}
+
+h3 {
+	color: white;
+	font-size: 20;
+	text-align: left;
+
+}
+
+h4 {
+	color: white;
+	font-size: 24;
+	text-align: left;
+}
+
+p {
+	color: white;
+	text-align: center;
+
+	font-family: Lucida Sans Typewriter;	
+	font-size: 16px;
+	background-color: rbga(0,0,0,.5);
+}
+
+hr {
+	border: 0;
+	border-bottom: 2px dashed;
+	color: white;
+}
+ul li {
+	background: #929E86;
+	list-style-position: inside;
+	padding: 10px;
+	margin-right: 10px;
+	color: white;
+}
+
+table, th, td {
+	border: 1px dashed white colllapse;
+	border-spacing: 10px;
+	border-collapse: separate;
+	color: white;
+	margin-right: 15px;
+}
+table.center {
+	margin-left: auto;
+	margin-right: auto;
+}
