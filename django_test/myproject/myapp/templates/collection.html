@@ -16,27 +16,19 @@
 		<a href="./collection">[view collection]</a>
 		<a href="./search">[search cards]</a>
 		<a href="./decks">[view decks]</a>
-		<a href="">[home]</a>
+		<a href="./">[home]</a>
 		
 	</nav>
 	<hr>
-	<div class="box box2">
-		<br>
-		This website is a way for me to sort and track my Magic the Gathering (MTG)
-		cards and decks utilising python, django, and sqlite3 
-		<br><br>
-	</div>
-	<hr>
-	<br>
-	<hr>
-	<div class="box box2">
-		<h1>Add Card to Collection</h1>
-		<form action="" method="post" enctype="multipart/form-data">
-			{% csrf_token %}
-			{{form.as_p}}
-    		<input type="submit" value="Submit">
-  		</form>
-	</div>
-	<hr>
+	<table>
+	  {% for card in collection %}
+	  <tr>
+	    <th> {{ card[0] }}</th>
+	  </tr> 
+	  {% endfor %}
+	</table>
+
+	
+
 </body>
 </html>
