@@ -29,4 +29,23 @@ class card(models.Model):
 	objects = CardManager()
 
 	def __str__(self):
-		return self.name
+		text_representation = self.name
+		return text_representation
+
+	def get_attributes(self):
+		attribute_list = [
+			self.name,
+			self.artist,
+			self.colors,
+			str(self.power),
+			str(self.toughness),
+			str(self.manaValue),
+			self.manaCost,
+			self.text,
+			self.setcode,
+			self.subtypes,
+			self.supertypes,
+			str(self.setNumber),
+			str(self.copies)]
+
+		return attribute_list

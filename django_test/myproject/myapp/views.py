@@ -42,8 +42,12 @@ def myview(request):
 
 def card_collection(request):
 
-	if request.POST:
-		con = sqlite3.connect("db.sqlite3")
-		cur = con.cursor()
-
-	return render(request, 'collection.html')
+	'''
+	con = sqlite3.connect("db.sqlite3")
+	cur = con.cursor()
+	cur.execute('SELECT * FROM myapp_card')
+	collection = cur.fetchall()
+	print(collection[0])
+	'''
+	cards = card.objects.all()
+	return render(request, 'collection.html', {'cards' : cards})

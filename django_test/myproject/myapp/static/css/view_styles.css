@@ -5,7 +5,7 @@ body {
 	width: 100%;
 	background-size: cover;
 	background-position: center;
-	max-width: 80ch;
+	max-width: 120ch;
 	margin: 1rem auto;
 }
 
@@ -101,8 +101,18 @@ ul li {
 	color: white;
 }
 
-table, th, td, tr {
-	border: 1px dashed white colllapse;
+th {
+	border: 1px solid white;
+	border-spacing: 10px;
+	border-collapse: separate;
+	color: white;
+	margin-right: 15px;
+	background-color: rbga(0,0,0,.5);
+	font-size: 24;
+}
+
+td, tr {
+	border: 1px solid white;
 	border-spacing: 10px;
 	border-collapse: separate;
 	color: white;

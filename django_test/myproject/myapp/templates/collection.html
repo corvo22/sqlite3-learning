@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="{% static 'css/styles.css'	 %}" />
+	<link rel="stylesheet" type="text/css" href="{% static 'css/view_styles.css' %}" />
 </head>
 <body>
 	<div class="container"></div>
@@ -20,15 +20,33 @@
 		
 	</nav>
 	<hr>
+	<div class="box box2">
 	<table>
-	  {% for card in collection %}
-	  <tr>
-	    <th> {{ card[0] }}</th>
-	  </tr> 
-	  {% endfor %}
+
+		<th>name</th>
+		<th>artist</th>
+		<th>colours</th>
+		<th>power</th>
+		<th>toughness</th>
+		<th>mana value</th>
+		<th>mana cost</th>
+		<th>text</th>
+		<th>set</th>
+		<th>subtypes</th>
+		<th>supertypes</th>
+		<th>set number</th>
+		<th>copies</th>
+
+		{% for card in cards %}
+	 	<tr>
+	 		{% for attribute in card.get_attributes %}
+	    		<td>{{ attribute }}</td>
+	    	{% endfor %}
+	  	</tr> 
+	  	{% endfor %}
 	</table>
 
-	
+	</div>
 
 </body>
 </html>
