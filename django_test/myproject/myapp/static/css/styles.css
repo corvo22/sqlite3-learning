@@ -101,12 +101,22 @@ ul li {
 	color: white;
 }
 
-table, th, td, tr {
-	border: 1px dashed white colllapse;
+table {
+	border-spacing: 10px;
+	border-collapse: collapse;
+	color: white;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: rbga(0,0,0,.5);
+}
+
+th, td, tr {
+	border: 1px solid white;
 	border-spacing: 10px;
 	border-collapse: separate;
 	color: white;
-	margin-right: 15px;
+	margin-right: auto;
+	margin-left: auto;
 	background-color: rbga(0,0,0,.5);
 }
 

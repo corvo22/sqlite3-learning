@@ -49,3 +49,15 @@ class card(models.Model):
 			str(self.copies)]
 
 		return attribute_list
+
+
+class collections_manager(models.Model):
+	def create_row(self, setcode, count, total, ratio):
+		new_row = self.create(setcode, count, total, ratio)
+
+class collection_table_entry(models.Model):
+	count = models.IntegerField()
+	total = models.IntegerField(default=0)
+	setcode = models.CharField(max_length=64)
+	ratio = models.CharField(max_length=64)
+	objects = collections_manager()
