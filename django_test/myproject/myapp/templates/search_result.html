@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/view_styles.css' %}" />
+</head>
+<body>
+	<div class="container"></div>
+	<title>MTG Card Collection</title>
+	<hr>
+		<nav>
+		
+		<a href="./collection">[view collection]</a>
+		<a href="./search">[search cards]</a>
+		<a href="./decks">[view decks]</a>
+		<a href="./">[home]</a>
+		
+	</nav>
+	<hr>
+	<div class="box box2">
+	<table>
+
+		<th>name</th>
+		<th>artist</th>
+		<th>colours</th>
+		<th>power</th>
+		<th>toughness</th>
+		<th>mana value</th>
+		<th>mana cost</th>
+		<th>text</th>
+		<th>set</th>
+		<th>subtypes</th>
+		<th>supertypes</th>
+		<th>set number</th>
+		<th>copies</th>
+
+		{% for card in cards %}
+	 	<tr>
+	 		{% for attribute in card.get_attributes %}
+	    		<td>{{ attribute }}</td>
+	    	{% endfor %}
+	  	</tr> 
+	  	{% endfor %}
+	</table>
+
+	</div>
+
+</body>
+</html>

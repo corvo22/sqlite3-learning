@@ -61,3 +61,15 @@ class collection_table_entry(models.Model):
 	setcode = models.CharField(max_length=64)
 	ratio = models.CharField(max_length=64)
 	objects = collections_manager()
+
+class set_tracker_manager(models.Model):
+	def create_set(self, setcode, owned, total, unique, ratio):
+		tracker = self.create(setcode, count, total, unique, ratio)
+
+class set_tracker(models.Model):
+	total = models.IntegerField(default=0)
+	owned = models.IntegerField(default=0)
+	unique = models.IntegerField(default=0)
+	ratio = models.CharField(max_length=64)
+	setcode = models.CharField(max_length=64)
+	objects = set_tracker_manager()

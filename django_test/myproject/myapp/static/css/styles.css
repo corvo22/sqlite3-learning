@@ -117,6 +117,6 @@ th, td, tr {
 	color: white;
 	margin-right: auto;
 	margin-left: auto;
+	align-content: left;
 	background-color: rbga(0,0,0,.5);
 }
-

@@ -28,12 +28,14 @@
 	<table>
 		<th>Set Name</th>
 		<th>Number Owned</th>
+		<th>Unique Owned</th>
 		<th>Total in Set</th>
 		<th>Completed</th>
 		{% for row in rows %}
 	 		<tr>
 	    		<td><a href='collection_specific/{{ row.setcode }}'>{{ row.setcode }}</a></td>
-	    		<td>{{ row.count }}</td>
+	    		<td>{{ row.owned }}</td>
+	    		<td>{{ row.unique }}</td>
 	    		<td>{{ row.total }}</td>
 	    		<td>{{ row.ratio }}</td>
 	  		</tr> 
